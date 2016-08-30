@@ -1,14 +1,17 @@
+"use strict";
+
 (function(){
   angular
   .module("BrandCentral", [
                           "ui.router"
                                       ])
-  .config(["$stateProvider", function($stateProvider){
+  .config(["$stateProvider", Router]);
+         function Router($stateProvider){
                    $stateProvider
                     .state("signUp", {
                       url        : "/signup",
-                      templateUrl: "./signUp/signUp.html",
+                      templateUrl: "app/signUp/signUp.html",
                       controller : "signUpController"
-                    })
-                  }])
+                    });
+                  }
 })();

@@ -4,10 +4,11 @@
   .controller("signUpController", [
                                     '$scope',
                                     '$state',
-                                    'signUpControllerFunction'
+                                    function($scope, $state)
                                   ]);
-  function signUpControllerFunction($scope, $state){
-
-  }
+  // function signUpControllerFunction($scope, $state){
+  //   console.log("im in the controller");
+  // 'signUpControllerFunction'
+  //}
 
 })();
