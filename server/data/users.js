@@ -6,7 +6,7 @@ var user     = mongoose.model("User", {
     username : String,
     gender   : String,
     profile  : String,
-    social   {
+    social   :{
       facebook : String,
       twitter  : String,
       linkedIn : String,
