@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 
 var app        = express();
 
+//***************DEFINING BACK-END CONTROLLERS***************
+var authenticationController = require("./server/controllers/authenticationController")
 
 //*****************CONNECT TO LOCAL DATABSE******************
 mongoose.connect('mongodb://localhost/brand-central-station')
@@ -22,12 +24,10 @@ app.listen(4000, function(){
           })
 //******************AUTHENTICATION SHIT*********************
 app.post("/api/user/signUp", authenticationController.signUp);
+app.post("/api/user/login", authenticationController.login);
 
 //*********************ROUTE TESTING************************
 
 app.get("/", function(req, res){
   res.render("index.hbs", {})
 })
-
-//***************DEFINING BACK-END CONTROLLERS***************
-var authenticationController = require("./server/controllers/authenticationController")
