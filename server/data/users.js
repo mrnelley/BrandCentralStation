@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var user     = mongoose.model("User", {
-    username : String,
-    password : String,
     email    : String,
+    password : String,
+    username : String,
     gender   : String,
     profile  : String,
     social   {
@@ -15,4 +15,4 @@ var user     = mongoose.model("User", {
     }
 });
 
-module.exports = user;
+module.exports = user

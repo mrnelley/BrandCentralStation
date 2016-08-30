@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="BrandCentral">
   <head>
+
     <meta charset="utf-8">
     <title>Brand Central Station</title>
+<!-- LOAD DEPENDENCIES HERE -->
+    <link rel="stylesheet" href ="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"/>
-    <script src="../app/app.js"/>
+<!-- DEVELOPER CREATED DEPENDENCIES -->
+    <script src ="../app/app.js"></script>
+    <script src ="../app/signUp/signUpController.js"></script>
+
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="col-md-6"><h1>Hello World!</h1></div>
+        <div class="col-md-6">
+          <input type="text" ng-model="login.email">
+          <input type="password" ng-model="login.password">
+          <button>Log In</button> <a ui-sref="signUp">New User?</a>
+        </div>
+      </div>
+    </nav>
+
+    <div data-ui-view></div>
+
   </body>
 </html>
