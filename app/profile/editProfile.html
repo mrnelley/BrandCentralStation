@@ -24,33 +24,51 @@
 
         <form class="form-horizontal" role="form">
           <div class="form-group">
+            <label class="col-lg-3 control-label">Username:</label>
+            <div class="col-lg-8">
+              <input class="form-control" ng-model = "user.username" value="Tommy" type="text" ng-blur="updateUsername()">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" ng-model = "user.password" value="11111122333" type="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <input class="form-control" value="11111122333" type="password" ng-blur="updatePassword()">
+            </div>
+          </div>
+          <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" ng-model = "user.lastname" value="Tom" type="text">
+              <input class="form-control" ng-model = "user.firstname" value="Tom" type="text" ng-blur="updateFname()">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" ng-model = "user.lastname" value="Foolery" type="text">
+              <input class="form-control" ng-model = "user.lastname" value="Foolery" type="text" ng-blur="updateLname()">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Bio:</label>
             <div class = "col-lg-8">
-              <textarea class="form-control" ng-model="user.bio" value="update your bio here"></textarea>
+              <textarea class="form-control" ng-model="user.bio" value="update your bio here" ng-blur="updateBio()"></textarea>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Company:</label>
             <div class="col-lg-8">
-              <input class="form-control" value="Tommy Inc." type="text">
+              <input class="form-control" value="Tommy Inc." type="text" ng-blur="updateCompany()">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" ng-model = "user.email" value = "tomsemail@gmail.com" type="text">
+              <input class="form-control" ng-model = "user.email" value = "tomsemail@gmail.com" type="text" ng-blur="updateEmail()">
             </div>
           </div>
           <div class="form-group">
@@ -68,24 +86,6 @@
                   <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
                 </select>
               </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Username:</label>
-            <div class="col-md-8">
-              <input class="form-control" ng-model = "user.username" value="janeuser" type="text">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Password:</label>
-            <div class="col-md-8">
-              <input class="form-control" ng-model = "user.password" value="11111122333" type="password">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Confirm password:</label>
-            <div class="col-md-8">
-              <input class="form-control" value="11111122333" type="password">
             </div>
           </div>
           <div class="form-group">

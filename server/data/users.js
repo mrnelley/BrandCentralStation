@@ -4,6 +4,10 @@ var user     = mongoose.model("User", {
     email    : String,
     password : String,
     username : String,
+    image    : String,
+    bio      : String,
+    firstname: String,
+    lastname : String,
     gender   : String,
     profile  : String,
     social   :{

@@ -39,6 +39,8 @@ app.post("/api/user/login", authenticationController.login);
 //************************PROFILE***************************
 app.post("/api/profile/editPhoto", multipartMiddleware, profileController.updatePhoto);
 //using mutipart to parse into json
+app.post("/api/profile/updateUsername", profileController.updateUsername);
+app.post("/api/profile/updateBio", profileController.updateBio);
 
 //*********************ROUTE TESTING************************
 

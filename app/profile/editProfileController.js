@@ -42,7 +42,30 @@
                  });
                }
              };
-           }
+//********************FUNCTION WRITING SKILLS ABOUT TO GET REAL******************
+      $scope.updateUsername = function(){
+        var request = {
+            userId  : $scope.user.id,
+            username: $scope.user.username
+        }
+        $http.post('api/profile/updateUsername', request)
+        .success(function(){ console.log("successful"); })
+        .error(function(err){console.log("error");})
+      }
+
+      $scope.updateBio     = function(){
+        var request = {
+          userId   : $scope.user.id,
+          bio      : $scope.user.bio
+        }
+        $http.post('api/profile/updateBio', request)
+        .success(function(){ console.log("successful");})
+        .error(function(err){console.log("error");})
+      }
+
+
+
+  }
 })();
 
 //**************JUNKYARD CODE****************
