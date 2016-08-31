@@ -9,3 +9,18 @@ module.exports.signUp = function(req,res){
 
   res.json(req.body);
 }
+
+module.exports.login = function(req, res){
+  User.find(req.body, function(err, results){
+    if(err){
+      console.log("error out");
+      console.log(err);
+    }
+    //i dont wanna see the function quietly succeed...hmmm
+    if(results && results.length == 1){
+      res.json(req.body.email)
+      //maybe respond with the user sign in req email?
+
+    }
+  })
+}

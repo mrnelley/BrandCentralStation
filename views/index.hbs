@@ -12,16 +12,18 @@
 <!-- DEVELOPER CREATED DEPENDENCIES -->
     <script src ="../app/app.js"></script>
     <script src ="../app/signUp/signUpController.js"></script>
+    <script src ="../app/navigation/navigationController.js"></script>
 
     <link rel="stylesheet" href="../app/public/css/main.css"
+
   </head>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavigationController">
     <div class="container">
       <div class="col-md-6"><h1>Hello World!</h1></div>
       <div class="col-md-6">
         <input type="text" ng-model="login.email">
         <input type="password" ng-model="login.password">
-        <button>Log In</button> <a ui-sref="signUp">New User?</a>
+        <button ng-click="Userlogin()">Log In</button> <a ui-sref="signUp">New User?</a>
       </div>
     </div>
   </nav>
