@@ -13,16 +13,17 @@
 
     $scope.Userlogin = (function(){
                         $http.post('api/user/login', $scope.login)
-                             .success(function(response){
-                                //lets set this equal to some object in local storage to confirm login
-                                //because you know theres like no application at this point
-                                localStorage.setItem('UserData', JSON.stringify(response));
-                                //annoying local storage cant take the raw JSON response
-                              })
-                              .error(function(error){
-                                console.log(error);
-                              })
-                            })
+
+                        //On success, lets set this equal to some object in local storage to confirm login
+                        //because you know theres like no application at this point
+                        //annoying, I think local storage cant take the raw JSON response
+                        .success(function(response){
+                          localStorage.setItem('UserData', JSON.stringify(response));
+                          })
+                        .error(function(error){
+                          console.log(error);
+                          })
+                          })
   }
 
 })();
