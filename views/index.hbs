@@ -5,28 +5,31 @@
     <meta charset="utf-8">
     <title>Brand Central Station</title>
 <!-- LOAD DEPENDENCIES/LIBRARIES HERE -->
+
     <link rel="stylesheet" href ="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 
-<!-- DEVELOPER CREATED DEPENDENCIES -->
+
+    <!-- Because I have no idea what file holds the ng-upload dependencies that i want... -->
+    <script src ="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+    <script src ="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
+    <script src ="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src ="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+    <!-- Why not link them all? -->
+
+    <!-- DEVELOPER CREATED DEPENDENCIES -->
     <script src ="../app/app.js"></script>
     <script src ="../app/signUp/signUpController.js"></script>
     <script src ="../app/navigation/navigationController.js"></script>
     <script src ="../app/profile/editProfileController.js"></script>
-
-    <!-- Because I have no idea what file holds the ng-upload dependencies that i want... -->
-    <script src ="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
-    <script src ="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
-    <script src ="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
-    <!-- Why not link them all? -->
 
     <link rel="stylesheet" href="../app/public/css/main.css"
 
   </head>
   <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavigationController">
     <div class="container">
-      <div class="col-md-6"><h1>Hello World!</h1></div>
+      <div class="col-md-6"><h1>Brand Central</h1></div>
       <div class="col-md-6" ng-show = "!loggedIn">
         <!-- IF USER IS NOT LOGGED IN -->
         <input type="text" ng-model ="login.email">

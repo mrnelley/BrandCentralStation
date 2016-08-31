@@ -37,17 +37,19 @@
                                 //without the file that we are passing in sooo..here it is
                  }).progress(function(evt){
                    console.log("working on it");//just some cool ng-upload stuff.
-                 }).succcess(function(data){
-                  //  console.log("finished");
                  }).error(function(error){
                    console.log("error out");
-                  //  console.log(error);
                  });
                }
-        // else(){
-        //          console.log("this didnt work");
-        //        }
              };
-      }
-
+           }
 })();
+
+//**************JUNKYARD CODE****************
+//APPARENTLY THESE THINGS DONT F'ING WORK
+//  }).succcess(function(data){
+//  console.log("finished");
+//  console.log(error);
+// else(){
+//          console.log("this didnt work");
+//        }
