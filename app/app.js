@@ -3,7 +3,8 @@
 (function(){
   angular
   .module("BrandCentral", [
-                          "ui.router"
+                          "ui.router",
+                          "ngFileUpload"
                                       ])
   .config(["$stateProvider", Router]);
          function Router($stateProvider){
@@ -12,6 +13,11 @@
                       url        : "/signup",
                       templateUrl: "app/signUp/signUp.html",
                       controller : "signUpController"
+                    })
+                    .state("editProfile", {
+                      url        : "/editProfile",
+                      templateUrl: "app/profile/editProfile.html",
+                      controller : "editProfileController"
                     });
                   }
 })();

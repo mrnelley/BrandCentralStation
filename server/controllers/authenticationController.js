@@ -18,9 +18,14 @@ module.exports.login = function(req, res){
     }
     //i dont wanna see the function quietly succeed...hmmm
     if(results && results.length == 1){
-      res.json(req.body.email)
-      //maybe respond with the user sign in req email?
-
+      // res.json(req.body.email)
+      // maybe respond with the user sign in req email?
+      // maybe not... maybe we want to acturally do something
+      var userData = results[0];
+      res.json({
+                email: req.body.email,
+                id   : userData._id
+              })
     }
   })
 }

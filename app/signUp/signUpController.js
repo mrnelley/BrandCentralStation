@@ -11,7 +11,7 @@
     console.log("im in the signUpcontroller");
 
     $scope.createUser = function(){
-                        console.log($scope.newUser);
+                        // console.log($scope.newUser);
                         $http.post('api/user/signUp', $scope.newUser)
                              .success(function(response){})
                              .error(function(error){
