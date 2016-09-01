@@ -20,9 +20,12 @@
 
     <!-- DEVELOPER CREATED DEPENDENCIES -->
     <script src ="../app/app.js"></script>
+<!-- BEGIN CONTROLLERS -->
     <script src ="../app/signUp/signUpController.js"></script>
     <script src ="../app/navigation/navigationController.js"></script>
     <script src ="../app/profile/editProfileController.js"></script>
+    <script src ="../app/main/mainController.js"></script>
+<!-- END CONTROLLERS -->
 
     <link rel="stylesheet" href="../app/public/css/main.css"
 
@@ -36,8 +39,9 @@
         <input type="password" ng-model ="login.password">
         <button ng-click="Userlogin()">Log In</button> <a ui-sref="signUp">New User?</a>
       </div>
-      <div ng-show="loggedIn">
-        <a ui-sref="editProfile">Edit Profile</a>
+      <div ng-show ="loggedIn">
+        <a ui-sref ="editProfile">Edit Profile</a>
+        <a ng-click="logOut()">Log Out</a>
       <div>
     </div>
   </nav>

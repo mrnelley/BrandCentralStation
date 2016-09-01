@@ -5,6 +5,8 @@ var fs   = require("fs-extra");
 var path = require("path");
 var mv   = require('mv');
 
+
+//************************PHOTO UPDATE**********************
 module.exports.updatePhoto = function(req, res){
   var file   = req.files.file;
   var userId = req.body.userId;
